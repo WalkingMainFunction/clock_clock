@@ -13,7 +13,7 @@ body {
 
 #clock-container {
     border: 1px white solid;
-    border-radius: 10px;
+    border-radius: 0.5rem;
 
     width: 1750px;
     height: auto;
@@ -29,12 +29,14 @@ body {
 }
 
 .digit {
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 0.5rem;
     display: grid;
     grid-template:
         repeat(6, 1fr) /
         repeat(4, 1fr);
     gap: 0.125rem;
+    padding: 0.2rem;
 }
 
 

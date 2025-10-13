@@ -99,9 +99,9 @@ window.addEventListener("load", () => {
 
       clockList.forEach((clock, clockPosition) => {
          clock.querySelectorAll('.zeiger').forEach((zeiger, zeigerPosition) => {
+            zeiger.style.opacity = digits[digit][clockPosition] === " " ? '35%' : '100%';
             zeiger.style.transform = 'rotate(' + rotations[digits[digit][clockPosition]][zeigerPosition] + 'deg)';
-
-         })
+         });
       });
    }
 
