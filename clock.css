@@ -1,0 +1,67 @@
+body {
+    background-image: radial-gradient(#1b1445, #0e0925);
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock-container {
+    border: 1px white solid;
+    border-radius: 10px;
+
+    width: 1750px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.digit-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.digit {
+    border: 1px solid white;
+    display: grid;
+    grid-template:
+        repeat(6, 1fr) /
+        repeat(4, 1fr);
+    gap: 0.125rem;
+}
+
+
+.clock {
+    position: relative;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #161045;
+    border: 0.2rem solid #090909;
+    border-radius: 50%;
+}
+
+.zeiger {
+    height: 0.1875rem;
+    background: #fbfb38;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: 0 -50%;
+    transform-origin: center left;
+    transition: transform 250ms;
+}
+
+/*.zeiger:nth-child(1) {*/
+/*    rotate: -80deg;*/
+/*}*/
+/*.zeiger:nth-child(2) {*/
+/*    rotate: 90deg;*/
+/*}*/
