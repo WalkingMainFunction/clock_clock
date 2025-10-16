@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=./index.php">
-    <title>Digital Uhr</title>
-
+    <title>Digitale Uhr</title>
     <link rel="stylesheet" href="clock.css">
 </head>
 <body>
+<div id="clock-container"></div>
+
+<script>
+    const container = document.getElementById('clock-container');
+
+    for (let c = 0; c <= 2; c++) {
+        const digitContainer = document.createElement('div');
+        digitContainer.classList.add('digit-container');
+
+        for (let d = 0; d <= 1; d++) {
+            const digit = document.createElement('div');
+            digit.classList.add('digit');
+
+            for (let k = 0; k <= 23; k++) {
+                const clock = document.createElement('div');
+                clock.classList.add('clock');
+
+                const zeiger1 = document.createElement('div');
+                zeiger1.classList.add('zeiger');
+                const zeiger2 = document.createElement('div');
+                zeiger2.classList.add('zeiger');
+
+                clock.appendChild(zeiger1);
+                clock.appendChild(zeiger2);
+                digit.appendChild(clock);
+            }
+
+            digitContainer.appendChild(digit);
+        }
+
+        container.appendChild(digitContainer);
+    }
+</script>
+
+<script src="clock.js"></script>
 </body>
 </html>
